@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Agridera</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <header class="header page-header-white">
+            <div class="container header-flex">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt="Agridera Logo"></a>
+                </div>
+                <div class="header-right">
+                    <nav class="nav">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="tomatoAll.html">Products</a></li>
+                            <li><a href="contact.html" style="color: #5A8C44;">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main class="contact-page">
+            <section class="contact-hero">
+                <img src="images/contact-banner.jpg" alt="Contact Banner" class="hero-img">
+            </section>
+
+            <section class="contact-content">
+                <div class="container">
+                    <h1>Contact us</h1>
+                    <div class="green-dots">*****</div>
+
+                    <form class="contact-form">
+                        <div class="form-grid">
+                            <div class="form-left">
+                                <div class="form-group">
+                                    <label>Name *</label>
+                                    <input type="text" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Email *</label>
+                                    <input type="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Telephone</label>
+                                    <input type="tel">
+                                </div>
+                            </div>
+
+                            <div class="form-right">
+                                <div class="form-group">
+                                    <label>You are a</label>
+                                    <select>
+                                        <option>seed producer</option>
+                                        <option>distributor</option>
+                                        <option>farmer</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Your Order (Products in cart)</label>
+                                    <textarea rows="5" readonly v-model="cartItemsText" style="background: #f9f9f9;"></textarea>
+                                </div>
+                                <div class="captcha-row">
+                                    <button type="submit" class="btn-send">Send Message</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <p>AGRIDERA SEEDS & AGRICULTURE LTD. © 2020</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
