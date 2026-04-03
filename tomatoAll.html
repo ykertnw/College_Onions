@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Agridera Onion Hybrids</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <div class="container header-flex">
+                <div class="logo"><a href='index.html'><img src="images/logo.png" alt="Logo"></a></div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tomatoAll.html" style="color: #5A8C44;">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="tomato-hero-bg" style="background-image: url('images/onion-hero-bg.jpg');"></section>
+
+        <section class="tomato-content-section">
+            <div class="container">
+                <div class="tomato-description">
+                    <h1>Agridera Onion Hybrids</h1>
+                    <div class="stars-decor"><img src="images/stars.jpg" alt="stars"></div>
+                    <p>Agridera aims to be one of the world's leading companies in breeding and production of onion seeds.</p>
+                    <div class="accent-border-box">
+                        Focusing on Short-day, Intermediate-day, and Long-day Onions.
+                    </div>
+                </div>
+
+                <div class="tomato-products-grid">
+                    <div class="tomato-card" v-for="p in products" :key="p.id">
+                        <a :href="'tomato-one.html#' + p.id" style="text-decoration: none; color: inherit;">
+                            <div class="img-wrapper">
+                                <img :src="'images/' + p.image" :alt="p.title">
+                            </div>
+                            <div class="tomato-card-info">
+                                <h4>{{ p.title }}</h4>
+                                <div class="green-line-small"></div>
+                                <p>{{ p.short_text }}</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="footer-bottom">
+                <div class="container">AGRIDERA SEEDS & AGRICULTURE LTD. © 2020</div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
