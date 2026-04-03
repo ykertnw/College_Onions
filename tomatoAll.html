@@ -21,7 +21,7 @@
             </div>
         </header>
 
-        <section class="tomato-hero-bg" style="background-image: url('images/onion-hero-bg.jpg');"></section>
+        <section class="tomato-hero-bg" style="background-image: url('./images/onion-hero-bg.jpg');"></section>
 
         <section class="tomato-content-section">
             <div class="container">
@@ -38,7 +38,7 @@
                     <div class="tomato-card" v-for="p in products" :key="p.id">
                         <a :href="'tomato-one.html#' + p.id" style="text-decoration: none; color: inherit;">
                             <div class="img-wrapper">
-                                <img :src="'images/' + p.image" :alt="p.title">
+                                <img :src="'./images/' + p.image" :alt="p.title">
                             </div>
                             <div class="tomato-card-info">
                                 <h4>{{ p.title }}</h4>
